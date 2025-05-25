@@ -95,6 +95,7 @@ def print_board(board, rows, cols, num_mines):
     flags = count_flags(board)
     print(f"\nNumber of mines remaining (estimated): {num_mines - flags}")
     print("    ", end="")
+    
     for c in range(cols):
         print(f"{c:2}", end=" ")
     print()
