@@ -1,3 +1,22 @@
+'''
+Game rule 💣:
+
+The goal of Minesweeper is to reveal all safe tiles without uncovering any mines. 
+
+Each tile may contain a number (1-8) indicating how many mines are adjacent, a mine (💣),
+or nothing (an empty tile, which will trigger a flood reveal of neighboring empty tiles). 
+
+You can reveal a tile using 'r row col', flag/unflag a tile with 'f row col', and quit the game with 'q'. 
+
+Flagged tiles cannot be revealed unless unflagged first. 
+
+The game ends when all safe tiles are revealed (you win) or when a mine is revealed (you lose).
+
+Use logic and the numbers to identify where the hidden mines are.
+
+'''
+
+
 import random
 
 # Choose the size of game
@@ -6,6 +25,7 @@ def choose_difficulty():
     print("1. primary(9x9, 10 mines)")
     print("2. middle(16x16, 40 mines)")
     print("3. advanced(30x16, 99 mines)")
+    
     choice = input("Your difficulty level(1/2/3): ").strip()
     if choice == '1':
         return 9, 9, 10
@@ -152,6 +172,8 @@ def play():
                 return
         else:
             print("Invalid command. Please use 'r' to reveal or 'f' to flag or 'q' to quit the game.")
+
+
 
 if __name__ == "__main__":
     play()
